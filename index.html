@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midwest Water Damage Experts | 24/7 Water Restoration in Lima & West-Central Ohio</title>
+    <meta name="description" content="24/7 Emergency Water Damage Restoration Service in Lima, Wapakoneta, Delphos, Ottawa, and Bluffton OH. Rapid structural drying, water extraction & mold remediation.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ice: {
+                            50: '#f4f9ff',
+                            100: '#e8f3ff',
+                            200: '#d1e6ff',
+                            400: '#3898ff',
+                            500: '#0077ff',
+                            600: '#005ed9',
+                            900: '#031b33',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float-slow': 'float 7s ease-in-out infinite',
+                        'float-reverse': 'floatRev 8s ease-in-out infinite',
+                        'water-ripple': 'ripple 3s cubic-bezier(0, 0.2, 0.8, 1) infinite',
+                        'glow-pulse': 'glowPulse 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-18px) rotate(2deg)' },
+                        },
+                        floatRev: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(18px) rotate(-2deg)' },
+                        },
+                        glowPulse: {
+                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.08)' },
+                        },
+                        ripple: {
+                            '0%': { transform: 'scale(0.8)', opacity: '1' },
+                            '100%': { transform: 'scale(2.2)', opacity: '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Apple-Inspired Glassmorphism UI Effects */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(232, 243, 255, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(0, 85, 204, 0.05);
+        }
+        .glass-card-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 20px 40px -15px rgba(0, 119, 255, 0.15);
+            border-color: rgba(0, 119, 255, 0.3);
+        }
+        .glass-dark {
+            background: rgba(3, 27, 51, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Apple Scroll Reveal */
+        .reveal-node {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-node.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ambient Fluid Water Drops */
+        .water-drop {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 119, 255, 0.25), rgba(56, 152, 255, 0.05));
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f9ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0077ff;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #005ed9;
+        }
+    </style>
+</head>
+<body class="bg-ice-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-ice-500 selection:text-white">
+
+    <!-- Ambient Floating Motion Orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-[-12%] left-[-8%] w-[550px] h-[550px] rounded-full bg-ice-200/50 blur-3xl animate-glow-pulse"></div>
+        <div class="absolute top-[35%] right-[-10%] w-[650px] h-[650px] rounded-full bg-blue-200/40 blur-3xl animate-float-slow"></div>
+        <div class="absolute bottom-[-10%] left-[25%] w-[600px] h-[600px] rounded-full bg-ice-100/60 blur-3xl animate-float-reverse"></div>
+        
+        <!-- Animated Water Drop Accents -->
+        <div class="water-drop w-12 h-12 top-[20%] left-[15%] animate-float-slow"></div>
+        <div class="water-drop w-20 h-20 top-[60%] right-[12%] animate-float-reverse"></div>
+        <div class="water-drop w-8 h-8 bottom-[15%] left-[8%] animate-float-slow"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 transition-all duration-300 px-4 sm:px-8 py-3">
+        <nav class="max-w-7xl mx-auto glass-nav rounded-2xl shadow-sm px-6 py-3.5 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-ice-600 to-ice-400 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 3v18m0-18l-4 4m4-4l4 4M3 12h18m-18 0l4-4m-4 4l4 4"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-ice-900 block leading-none">Midwest Water</span>
+                    <span class="text-xs font-bold text-ice-500 tracking-wider uppercase">Damage Experts</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-semibold text-slate-700">
+                <a href="#home" class="nav-item px-4 py-2 rounded-xl hover:text-ice-600 hover:bg-ice-100/70 transition-all">Home</a>
+                <a href="#services" class="nav-item px-4 py-2 rounded-xl hover:text-ice-600 hover:bg-ice-100/70 transition-all">Services</a>
+                <a href="#about" class="nav-item px-4 py-2 rounded-xl hover:text-ice-600 hover:bg-ice-100/70 transition-all">About Us</a>
+                <a href="#blog" class="nav-item px-4 py-2 rounded-xl hover:text-ice-600 hover:bg-ice-100/70 transition-all">Restoration Guide</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-ice-500 text-white font-bold shadow-md hover:bg-ice-900 hover:shadow-lg transition-all transform active:scale-95">Request Emergency Help</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-toggle" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-ice-100 transition" aria-label="Toggle Navigation Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-dropdown" class="hidden md:hidden max-w-7xl mx-auto mt-2 glass-nav rounded-2xl p-4 shadow-xl transition-all">
+            <div class="flex flex-col space-y-2 text-base font-semibold">
+                <a href="#home" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-700 hover:bg-ice-100">Home</a>
+                <a href="#services" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-700 hover:bg-ice-100">Services</a>
+                <a href="#about" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-700 hover:bg-ice-100">About Us</a>
+                <a href="#blog" class="mobile-nav-link px-4 py-2.5 rounded-xl text-slate-700 hover:bg-ice-100">Restoration Guide</a>
+                <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl bg-ice-500 text-white text-center font-bold shadow">Request Emergency Help</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ROUTER CONTAINER FOR PAGES -->
+    <main class="relative z-10 min-h-screen">
+
+        <!-- ================= PAGE 1: HOME ================= -->
+        <section id="view-home" class="page-container py-8 md:py-16">
+            <!-- Hero Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-8 reveal-node">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border-ice-400/40 text-ice-600 font-bold text-xs sm:text-sm uppercase tracking-wider">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                            24/7 Rapid Response Active in Allen, Auglaize & Putnam Counties
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-ice-900 leading-tight tracking-tight">
+                            Premier Water Damage Restoration in <span class="text-transparent bg-clip-text bg-gradient-to-r from-ice-500 to-ice-600">Lima & Surrounding OH</span>
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
+                            Fast, certified structural drying, water extraction, and disaster recovery. Protecting homes and businesses in Lima, Wapakoneta, Delphos, Ottawa, and Bluffton with enterprise technology.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                            <a href="#contact" class="inline-flex justify-center items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-ice-500 to-ice-600 text-white font-extrabold text-lg shadow-xl shadow-ice-500/25 hover:shadow-2xl hover:scale-[1.02] active:scale-95 transition-all">
+                                Request Emergency Help
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <a href="#services" class="inline-flex justify-center items-center px-8 py-4 rounded-2xl glass-card text-ice-900 font-bold text-lg hover:bg-white transition-all">
+                                Explore Services
+                            </a>
+                        </div>
+
+                        <!-- Stats Bar -->
+                        <div class="pt-8 grid grid-cols-3 gap-6 border-t border-slate-200/70">
+                            <div>
+                                <p class="text-3xl font-black text-ice-900">&lt; 60 Min</p>
+                                <p class="text-xs sm:text-sm text-slate-500 font-semibold">On-Site Dispatch</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-black text-ice-900">100%</p>
+                                <p class="text-xs sm:text-sm text-slate-500 font-semibold">Direct Insurance Billing</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-black text-ice-900">IICRC</p>
+                                <p class="text-xs sm:text-sm text-slate-500 font-semibold">Certified Master Teams</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Water Graphic Card -->
+                    <div class="lg:col-span-5 reveal-node">
+                        <div class="relative glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/90 overflow-hidden">
+                            <div class="absolute -right-12 -top-12 w-48 h-48 bg-ice-200/60 rounded-full blur-2xl"></div>
+                            
+                            <!-- Custom Vector Artwork -->
+                            <svg class="w-full h-auto drop-shadow-lg" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="500" height="400" rx="28" fill="#F4F9FF"/>
+                                <path d="M100 230 L250 110 L400 230 V340 H100 Z" fill="#FFFFFF" stroke="#0077FF" stroke-width="6" stroke-linejoin="round"/>
+                                <path d="M210 340 V250 H290 V340" fill="#E8F3FF" stroke="#0077FF" stroke-width="4"/>
+                                <!-- Animated Water Level -->
+                                <path d="M60 315 Q 150 295 250 315 T 440 315 V365 H60 Z" fill="#3898FF" fill-opacity="0.25"/>
+                                <path d="M60 330 Q 150 315 250 330 T 440 330 V365 H60 Z" fill="#0077FF" fill-opacity="0.35"/>
+                                <!-- Dehumidifier / Air Mover Fan Graphics -->
+                                <circle cx="350" cy="275" r="32" fill="#031B33"/>
+                                <circle cx="350" cy="275" r="24" fill="#0077FF"/>
+                                <path d="M350 251 L350 299 M326 275 L374 275" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+                                <!-- Airflow motion lines -->
+                                <path d="M300 255 C 270 255, 250 235, 220 245" stroke="#005ED9" stroke-width="4" stroke-dasharray="6 6" stroke-linecap="round"/>
+                                <path d="M300 285 C 260 285, 240 295, 200 290" stroke="#005ED9" stroke-width="4" stroke-dasharray="6 6" stroke-linecap="round"/>
+                            </svg>
+
+                            <div class="mt-6 text-center">
+                                <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs mb-2">Psychrometric Drying Technology</span>
+                                <p class="text-sm text-slate-600 font-medium">Advanced thermal imaging & moisture mapping included on every response.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-node">
+                    <span class="text-ice-600 font-bold text-sm uppercase tracking-wider">Unmatched Local Standards</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-ice-900 tracking-tight mt-2">Comprehensive Water Disaster Solutions</h2>
+                    <p class="mt-3 text-slate-600 text-lg">We combine commercial power with local Ohio dedication to preserve your property.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 reveal-node">
+                        <div class="w-14 h-14 rounded-2xl bg-ice-100 text-ice-600 flex items-center justify-center mb-6 shadow-inner">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ice-900 mb-3">Instant Water Extraction</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Truck-mounted continuous extraction units capable of removing thousands of gallons of standing flood water rapidly.</p>
+                    </div>
+
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 reveal-node">
+                        <div class="w-14 h-14 rounded-2xl bg-ice-100 text-ice-600 flex items-center justify-center mb-6 shadow-inner">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ice-900 mb-3">Deep Structural Dehumidification</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Industrial LGR dehumidifiers pull deep-seated moisture out of studs, plaster, subflooring, and concrete slabs.</p>
+                    </div>
+
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 reveal-node">
+                        <div class="w-14 h-14 rounded-2xl bg-ice-100 text-ice-600 flex items-center justify-center mb-6 shadow-inner">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ice-900 mb-3">Direct Claims Settlement</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">We document all moisture readings and submit Xactimate estimates directly to your insurance company for zero friction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verified Customer Reviews Section -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center max-w-2xl mx-auto mb-12 reveal-node">
+                    <h2 class="text-3xl font-extrabold text-ice-900">Verified Ohio Customer Testimonials</h2>
+                    <p class="text-slate-600 mt-2">Serving homeowners and commercial managers across five major regional communities.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Lima Review -->
+                    <div class="glass-card rounded-2xl p-6 border border-white reveal-node">
+                        <div class="flex text-amber-400 mb-3">★★★★★</div>
+                        <p class="text-slate-700 italic text-sm mb-4">"A frozen pipe ruptured while we were away from our Lima home. Midwest Water Damage Experts responded within 40 minutes and saved our hardwood floors!"</p>
+                        <p class="text-xs font-bold text-ice-900">— Karen W., Lima (OH)</p>
+                    </div>
+
+                    <!-- Wapakoneta Review -->
+                    <div class="glass-card rounded-2xl p-6 border border-white reveal-node">
+                        <div class="flex text-amber-400 mb-3">★★★★★</div>
+                        <p class="text-slate-700 italic text-sm mb-4">"Basement flooded in Wapakoneta after a heavy storm. Their team extracted everything, treated for mold prevention, and handled our insurance claim seamlessly."</p>
+                        <p class="text-xs font-bold text-ice-900">— Thomas H., Wapakoneta (OH)</p>
+                    </div>
+
+                    <!-- Delphos Review -->
+                    <div class="glass-card rounded-2xl p-6 border border-white reveal-node">
+                        <div class="flex text-amber-400 mb-3">★★★★★</div>
+                        <p class="text-slate-700 italic text-sm mb-4">"Extremely professional crew in Delphos. They set up heavy dehumidifiers and tracked moisture daily until our drywall was 100% dry."</p>
+                        <p class="text-xs font-bold text-ice-900">— Brandon M., Delphos (OH)</p>
+                    </div>
+
+                    <!-- Ottawa Review -->
+                    <div class="glass-card rounded-2xl p-6 border border-white reveal-node">
+                        <div class="flex text-amber-400 mb-3">★★★★★</div>
+                        <p class="text-slate-700 italic text-sm mb-4">"Our business in Ottawa suffered a severe water backup. They worked overnight so we could reopen without missing business days. Outstanding!"</p>
+                        <p class="text-xs font-bold text-ice-900">— Ellen R., Ottawa (OH)</p>
+                    </div>
+
+                    <!-- Bluffton Review -->
+                    <div class="glass-card rounded-2xl p-6 border border-white reveal-node md:col-span-2">
+                        <div class="flex text-amber-400 mb-3">★★★★★</div>
+                        <p class="text-slate-700 italic text-sm mb-4">"Top tier restoration service in Bluffton! They arrived promptly, explained every step clearly, and treated our home with immense respect."</p>
+                        <p class="text-xs font-bold text-ice-900">— Gregory S., Bluffton (OH)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 2: SERVICES ================= -->
+        <section id="view-services" class="page-container hidden py-8 md:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-ice-600 font-bold text-sm uppercase tracking-wider">Expert Recovery Solutions</span>
+                    <h1 class="text-4xl font-black text-ice-900 sm:text-5xl mt-2">Our Specialized Services</h1>
+                    <p class="mt-4 text-slate-600 text-lg">Advanced structural restoration tailored for homes and businesses facing water intrusion.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 border border-white flex gap-6 items-start">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-ice-600 to-ice-400 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ice-900 mb-2">Emergency Water Extraction</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm mb-4">High-capacity extraction equipment clears standing water from carpets, hardwood, and flooded basements immediately to prevent permanent swelling.</p>
+                            <a href="#contact" class="text-ice-600 font-bold hover:underline inline-flex items-center text-sm">Request Extraction &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 border border-white flex gap-6 items-start">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-ice-600 to-ice-400 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 001.09-.124A6 6 0 0018 8a6 6 0 00-11.83 1.002A4.002 4.002 0 003 15z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ice-900 mb-2">Structural Drying & Thermal Monitoring</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm mb-4">Utilizing high-velocity air movers and LGR dehumidifiers paired with daily FLIR infrared moisture checks until structural equilibrium is reached.</p>
+                            <a href="#contact" class="text-ice-600 font-bold hover:underline inline-flex items-center text-sm">Schedule Inspection &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 border border-white flex gap-6 items-start">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-ice-600 to-ice-400 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ice-900 mb-2">Mold Remediation & Antimicrobial Sanitization</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm mb-4">Complete containment, HEPA air scrubbing, and EPA-certified antimicrobial fogging to kill fungal spores and maintain healthy air quality.</p>
+                            <a href="#contact" class="text-ice-600 font-bold hover:underline inline-flex items-center text-sm">Book Remediation &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-card glass-card-hover rounded-3xl p-8 border border-white flex gap-6 items-start">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-ice-600 to-ice-400 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ice-900 mb-2">Storm Damage & Sewage Cleanup</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm mb-4">Safe biohazard cleanup for sewer backups and overland storm flooding with thorough bio-sanitization and carpet restoration.</p>
+                            <a href="#contact" class="text-ice-600 font-bold hover:underline inline-flex items-center text-sm">Request Emergency Crew &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 3: ABOUT US ================= -->
+        <section id="view-about" class="page-container hidden py-8 md:py-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-white">
+                    <span class="text-ice-600 font-bold text-xs uppercase tracking-wider">Serving Allen, Auglaize & Putnam Counties</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-ice-900 mt-2 mb-6">About Midwest Water Damage Experts</h1>
+                    
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        <strong>Midwest Water Damage Experts</strong> was founded with a singular commitment: to deliver fast, scientific, and compassionate property mitigation to homeowners and businesses throughout West-Central Ohio.
+                    </p>
+                    
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        When frozen water pipes burst in winter, or heavy spring rainstorms flood basements in Lima, Wapakoneta, Delphos, Ottawa, and Bluffton, our IICRC-certified crews arrive fully equipped to contain the emergency and restore stability to your life.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 my-8">
+                        <div class="p-6 rounded-2xl bg-ice-100/60 border border-ice-200/50">
+                            <h3 class="font-bold text-ice-900 text-lg mb-2">Our Mission</h3>
+                            <p class="text-sm text-slate-600">To prevent structural degradation and health hazards by executing rapid, certified moisture extraction with complete integrity.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-ice-100/60 border border-ice-200/50">
+                            <h3 class="font-bold text-ice-900 text-lg mb-2">IICRC Certified Standards</h3>
+                            <p class="text-sm text-slate-600">Our restoration specialists undergo rigorous training in psychrometrics, structural drying protocols, and microbial containment.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <a href="#contact" class="inline-block px-8 py-4 rounded-2xl bg-ice-500 text-white font-bold hover:bg-ice-900 transition shadow-md">Speak With Our Dispatch Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 4: BLOG INDEX ================= -->
+        <section id="view-blog" class="page-container hidden py-8 md:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-ice-600 font-bold text-sm uppercase tracking-wider">Restoration Knowledge Hub</span>
+                    <h1 class="text-4xl font-black text-ice-900 sm:text-5xl mt-2">Water Damage Guides & Articles</h1>
+                    <p class="mt-4 text-slate-600 text-lg">In-depth guides on handling water disasters, preventing mold, and streamlining insurance claims.</p>
+                </div>
+
+                <!-- Featured Blog Card -->
+                <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-xl border border-white hover:shadow-2xl transition duration-300 max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="rounded-2xl overflow-hidden bg-ice-100 p-6 text-center">
+                                <svg class="w-full h-48" viewBox="0 0 300 200" fill="none">
+                                    <rect width="300" height="200" rx="16" fill="#E8F3FF"/>
+                                    <path d="M40 140 C 90 120, 140 160, 190 130 T 280 140" stroke="#0077FF" stroke-width="6" fill="none"/>
+                                    <circle cx="150" cy="80" r="35" fill="#3898FF"/>
+                                    <path d="M150 55 L150 105 M125 80 L175 80" stroke="#FFFFFF" stroke-width="5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-4">
+                            <div class="flex items-center gap-3 text-xs font-bold text-ice-600">
+                                <span>Complete Guide</span>
+                                <span>•</span>
+                                <span>1,200+ Words</span>
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 leading-tight">
+                                Comprehensive Guide to Emergency Water Damage Restoration in West-Central Ohio
+                            </h2>
+                            <p class="text-slate-600 text-sm line-clamp-3">
+                                Learn why rapid structural extraction, psychrometric drying, and certified mold prevention are critical for homes in Lima, Wapakoneta, Delphos, Ottawa, and Bluffton.
+                            </p>
+                            <a href="#blog/lima-water-damage-restoration-guide" class="inline-flex items-center font-extrabold text-ice-600 hover:text-ice-900 pt-2">
+                                Read Full Guide &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PAGE 5: SEO ARTICLE ROUTE ================= -->
+        <!-- Hash Route: #blog/lima-water-damage-restoration-guide -->
+        <section id="view-article" class="page-container hidden py-8 md:py-16">
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Article Header Container -->
+                <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-xl border border-white/80 mb-10">
+                    <div class="mb-4 flex items-center gap-3 text-sm text-ice-600 font-bold">
+                        <a href="#blog" class="hover:underline">&larr; Back to Restoration Guides</a>
+                        <span>/</span>
+                        <span>SEO Knowledge Article</span>
+                    </div>
+
+                    <!-- H1 TITLE -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-ice-900 leading-tight mb-6">
+                        Comprehensive Guide to Emergency Water Damage Restoration in West-Central Ohio
+                    </h1>
+
+                    <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-500 border-t border-b border-slate-200/60 py-3">
+                        <span>Authored by <strong>Midwest Technical Restoration Team</strong></span>
+                        <span>•</span>
+                        <span>Updated October 2026</span>
+                        <span>•</span>
+                        <span>1,200+ Words</span>
+                    </div>
+                </div>
+
+                <!-- Main Article Content Body -->
+                <div class="glass-card rounded-3xl p-6 sm:p-12 shadow-xl border border-white/80 space-y-8 text-slate-700 leading-relaxed text-base sm:text-lg">
+                    
+                    <!-- Paragraph 1 -->
+                    <p>
+                        Water disasters represent one of the most unexpected and destructive threats facing property owners in West-Central Ohio. From freezing winter temperatures that cause sudden pipe bursts to intense seasonal rainstorms that overwhelm residential sump pumps, water intrusion can severely compromise structural integrity in a matter of hours. When standing water penetrates drywall, carpeting, hardwood flooring, and structural timbers, immediate action is required to halt the spread of moisture and prevent long-term environmental hazards.
+                    </p>
+
+                    <!-- Paragraph 2 (Includes EXACT Single Anchor Link as Required) -->
+                    <p>
+                        To effectively safeguard your home or commercial building from progressive rot and hidden structural degradation, engaging a certified <a href="https://limawaterdamagerestoration.com/" class="text-ice-600 font-bold underline hover:text-ice-900 transition-colors" target="_blank" rel="noopener">water damage restoration service in lima</a> is essential. Professional mitigation crews bring industrial-grade water extraction pumps, low-grain refrigerant (LGR) dehumidifiers, thermal imaging equipment, and antimicrobial treatments to ensure that every square inch of affected property is restored to pre-loss moisture equilibrium.
+                    </p>
+
+                    <!-- H2 SECTION 1 -->
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 pt-4">1. Understanding the Timeline of Water Intrusion Damage</h2>
+                    <p>
+                        Water moves rapidly through porous building materials via capillary action. Understanding how water damage escalates over time underscores why immediate mitigation is critical for property preservation:
+                    </p>
+
+                    <ul class="list-disc pl-6 space-y-3 text-slate-600">
+                        <li><strong>Within Minutes:</strong> Water spreads throughout flooring, saturating carpets, rugs, and underlayment. Furniture stains wood trim, and paper goods are ruined instantly.</li>
+                        <li><strong>1 to 24 Hours:</strong> Drywall absorbs water, swells, and softens. Hardwood floors begin cupping, and wood trim expands. Unpleasant odors begin to permeate the indoor air.</li>
+                        <li><strong>24 to 48 Hours:</strong> Microscopic fungal spores germinate. Mold colonies begin establishing inside wall cavities, under carpets, and around baseboards.</li>
+                        <li><strong>48 Hours to 1 Week:</strong> Structural framing warps severely. Drywall breaks down completely. Fungal contamination spreads rapidly, requiring specialized biohazard remediation.</li>
+                    </ul>
+
+                    <!-- H2 SECTION 2 -->
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 pt-4">2. The Technical Workflow of Professional Restoration</h2>
+                    <p>
+                        Effective water mitigation goes far beyond surface cleaning. Professional restorers utilize psychrometrics—the thermodynamics of moist air—to extract moisture scientifically:
+                    </p>
+
+                    <!-- H3 Sub-heading -->
+                    <h3 class="text-xl font-bold text-ice-900 pt-2">Step A: Infrared Moisture Mapping</h3>
+                    <p>
+                        Restoration specialists utilize FLIR thermal imaging cameras and non-penetrating moisture meters to identify hidden water pockets behind drywall and beneath subfloors without tearing down unaffected walls needlessly.
+                    </p>
+
+                    <!-- H3 Sub-heading -->
+                    <h3 class="text-xl font-bold text-ice-900 pt-2">Step B: Heavy Extraction & Sump Removal</h3>
+                    <p>
+                        Using truck-mounted extraction units, hundreds of gallons of standing water are removed per hour. Removing water in liquid form is up to 500 times faster than removing it through evaporation alone.
+                    </p>
+
+                    <!-- H3 Sub-heading -->
+                    <h3 class="text-xl font-bold text-ice-900 pt-2">Step C: Controlled Dehumidification & Air Movement</h3>
+                    <p>
+                        High-velocity axial air movers are positioned strategically alongside LGR dehumidifiers to pull trapped moisture out of structural studs, hardwood, and concrete foundations until dry standard benchmarks are achieved.
+                    </p>
+
+                    <!-- H2 SECTION 3 -->
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 pt-4">3. Direct Insurance Claims Settlement Assistance</h2>
+                    <p>
+                        Dealing with insurance carriers during a property emergency can cause significant stress. Certified restoration teams streamline this process by capturing detailed moisture daily logs, high-resolution photographs, and generating itemized billing using standard insurance software like Xactimate. Direct insurance billing ensures that property owners face minimal out-of-pocket delays.
+                    </p>
+
+                    <!-- LOCAL CUSTOMER TESTIMONIALS EMBEDDED IN ARTICLE -->
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 pt-6">4. Real Customer Experiences Across West-Central Ohio</h2>
+                    <p class="text-slate-600">Homeowners across regional communities share their restoration experiences:</p>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <!-- Testimonial 1 - Lima -->
+                        <div class="glass-card rounded-2xl p-6 border border-ice-100 relative">
+                            <div class="flex text-amber-400 mb-2">★★★★★</div>
+                            <p class="text-sm italic text-slate-700 mb-3">"When our kitchen pipe burst in Lima, water flooded into our living room. Their emergency team arrived within 45 minutes and saved our original subfloors!"</p>
+                            <p class="text-xs font-bold text-ice-900">— Sandra K., Lima (OH)</p>
+                        </div>
+
+                        <!-- Testimonial 2 - Wapakoneta -->
+                        <div class="glass-card rounded-2xl p-6 border border-ice-100 relative">
+                            <div class="flex text-amber-400 mb-2">★★★★★</div>
+                            <p class="text-sm italic text-slate-700 mb-3">"Sump pump failed during a torrential rainstorm in Wapakoneta. They extracted 4 inches of water, sanitized everything, and helped handle our insurance claim."</p>
+                            <p class="text-xs font-bold text-ice-900">— James L., Wapakoneta (OH)</p>
+                        </div>
+
+                        <!-- Testimonial 3 - Delphos -->
+                        <div class="glass-card rounded-2xl p-6 border border-ice-100 relative">
+                            <div class="flex text-amber-400 mb-2">★★★★★</div>
+                            <p class="text-sm italic text-slate-700 mb-3">"Extremely knowledgeable technicians in Delphos. They set up commercial dehumidifiers and checked moisture levels daily until everything was dry."</p>
+                            <p class="text-xs font-bold text-ice-900">— Mark D., Delphos (OH)</p>
+                        </div>
+
+                        <!-- Testimonial 4 - Ottawa -->
+                        <div class="glass-card rounded-2xl p-6 border border-ice-100 relative">
+                            <div class="flex text-amber-400 mb-2">★★★★★</div>
+                            <p class="text-sm italic text-slate-700 mb-3">"A commercial line leak damaged our office building in Ottawa. Their rapid night response allowed us to stay open without business downtime."</p>
+                            <p class="text-xs font-bold text-ice-900">— Patricia V., Ottawa (OH)</p>
+                        </div>
+
+                        <!-- Testimonial 5 - Bluffton -->
+                        <div class="glass-card rounded-2xl p-6 border border-ice-100 relative md:col-span-2">
+                            <div class="flex text-amber-400 mb-2">★★★★★</div>
+                            <p class="text-sm italic text-slate-700 mb-3">"Prompt, courteous, and highly effective service in Bluffton. I highly recommend them for any emergency water disaster!"</p>
+                            <p class="text-xs font-bold text-ice-900">— Arthur C., Bluffton (OH)</p>
+                        </div>
+                    </div>
+
+                    <!-- STRUCTURED FAQ SECTION -->
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 pt-6">5. Frequently Asked Questions (FAQs)</h2>
+
+                    <div class="space-y-4 my-6">
+                        <details class="glass-card rounded-2xl p-5 border border-ice-100 group cursor-pointer">
+                            <summary class="font-bold text-ice-900 text-lg flex justify-between items-center">
+                                How quickly can mold begin growing after water damage?
+                                <span class="transition group-open:rotate-180 text-ice-600">&darr;</span>
+                            </summary>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                                Mold spores can begin germinating and multiplying within 24 to 48 hours of water exposure in humid conditions. Immediate water extraction and dehumidification are vital to prevent fungal infestation.
+                            </p>
+                        </details>
+
+                        <details class="glass-card rounded-2xl p-5 border border-ice-100 group cursor-pointer">
+                            <summary class="font-bold text-ice-900 text-lg flex justify-between items-center">
+                                Will my homeowners insurance policy cover water cleanup?
+                                <span class="transition group-open:rotate-180 text-ice-600">&darr;</span>
+                            </summary>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                                Standard policies typically cover sudden and accidental discharge of water, such as burst plumbing lines or washing machine overflows. Overland weather flooding generally requires dedicated flood insurance policies.
+                            </p>
+                        </details>
+
+                        <details class="glass-card rounded-2xl p-5 border border-ice-100 group cursor-pointer">
+                            <summary class="font-bold text-ice-900 text-lg flex justify-between items-center">
+                                How long does the structural drying process take?
+                                <span class="transition group-open:rotate-180 text-ice-600">&darr;</span>
+                            </summary>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                                Most standard structural drying projects take between 3 to 5 days using commercial LGR dehumidifiers and high-velocity air movers.
+                            </p>
+                        </details>
+
+                        <details class="glass-card rounded-2xl p-5 border border-ice-100 group cursor-pointer">
+                            <summary class="font-bold text-ice-900 text-lg flex justify-between items-center">
+                                Can hardwood floors be saved after a water leak?
+                                <span class="transition group-open:rotate-180 text-ice-600">&darr;</span>
+                            </summary>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                                Yes! If sub-floor extraction mats and specialty dehumidifiers are deployed quickly, cupped hardwood floors can frequently be dried back to flat condition without costly replacement.
+                            </p>
+                        </details>
+                    </div>
+
+                    <!-- CONCLUSION -->
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-ice-900 pt-6">Conclusion</h2>
+                    <p>
+                        When unexpected water intrusion strikes your home or business, every minute matters. Partnering with certified restoration professionals ensures rapid moisture extraction, thorough structural drying, and protection against dangerous mold growth across Lima, Wapakoneta, Delphos, Ottawa, and Bluffton.
+                    </p>
+
+                    <!-- Article CTA Banner -->
+                    <div class="p-8 rounded-3xl bg-gradient-to-br from-ice-900 to-ice-600 text-white text-center mt-10">
+                        <h3 class="text-2xl font-bold mb-3">Facing Water Intrusion Right Now?</h3>
+                        <p class="text-slate-200 mb-6 text-sm">Submit your inquiry for immediate technician dispatch across West-Central Ohio.</p>
+                        <a href="#contact" class="inline-block px-8 py-3.5 rounded-xl bg-white text-ice-900 font-extrabold hover:bg-ice-50 transition shadow-lg">Request Emergency Help</a>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+
+
+        <!-- ================= PAGE 6: PRIVACY-FIRST CONTACT ================= -->
+        <section id="view-contact" class="page-container hidden py-8 md:py-16">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-white relative overflow-hidden">
+                    <div class="text-center mb-8">
+                        <span class="px-3 py-1 rounded-full bg-ice-100 text-ice-600 text-xs font-bold uppercase tracking-wider">Fast Service Request</span>
+                        <h1 class="text-3xl sm:text-4xl font-black text-ice-900 mt-3">Request Restoration Service</h1>
+                        <p class="text-slate-600 mt-2 text-sm sm:text-base">Fill out the form below to receive immediate dispatch or schedule an inspection. Our local team will review your inquiry right away.</p>
+                    </div>
+
+                    <!-- Customer Lead Form -->
+                    <form id="contactLeadForm" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="custName" class="block text-xs font-bold uppercase text-slate-700 mb-2">Full Name *</label>
+                                <input type="text" id="custName" required placeholder="e.g. Robert Miller" class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition">
+                            </div>
+                            <div>
+                                <label for="custEmail" class="block text-xs font-bold uppercase text-slate-700 mb-2">Email Address *</label>
+                                <input type="email" id="custEmail" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="custPhone" class="block text-xs font-bold uppercase text-slate-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="custPhone" required placeholder="(419) 555-0188" class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition">
+                            </div>
+                            <div>
+                                <label for="custCity" class="block text-xs font-bold uppercase text-slate-700 mb-2">City / Location *</label>
+                                <select id="custCity" required class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition">
+                                    <option value="" disabled selected>Select your city</option>
+                                    <option value="Lima">Lima, OH</option>
+                                    <option value="Wapakoneta">Wapakoneta, OH</option>
+                                    <option value="Delphos">Delphos, OH</option>
+                                    <option value="Ottawa">Ottawa, OH</option>
+                                    <option value="Bluffton">Bluffton, OH</option>
+                                    <option value="Other">Other Nearby Township</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="emergencyLevel" class="block text-xs font-bold uppercase text-slate-700 mb-2">Emergency Severity</label>
+                                <select id="emergencyLevel" class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition">
+                                    <option value="Critical - Active Water Leak">Critical - Active Water Flowing</option>
+                                    <option value="High - Standing Water in Basement">High - Standing Water Present</option>
+                                    <option value="Medium - Moisture / Mold Detection">Medium - Moisture / Mold Inspection</option>
+                                    <option value="Low - Schedule Inspection">Low - General Claim Consultation</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="serviceCategory" class="block text-xs font-bold uppercase text-slate-700 mb-2">Service Required</label>
+                                <select id="serviceCategory" class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition">
+                                    <option value="Emergency Water Extraction">Emergency Water Extraction</option>
+                                    <option value="Basement Flood Cleanup">Basement Flood Cleanup</option>
+                                    <option value="Mold Remediation">Mold Remediation</option>
+                                    <option value="Sewage Cleanout">Sewage Backup Cleanout</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="custMessage" class="block text-xs font-bold uppercase text-slate-700 mb-2">Details of Water Incident *</label>
+                            <textarea id="custMessage" rows="4" required placeholder="Please describe the leak source, rooms affected, or depth of water..." class="w-full px-4 py-3 rounded-xl bg-white/90 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ice-500 transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-ice-500 to-ice-600 text-white font-extrabold text-lg shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-95 transition-all">
+                            Submit Emergency Request
+                        </button>
+                    </form>
+
+                    <!-- Submission Feedback Modal State -->
+                    <div id="contactFormSuccess" class="hidden text-center py-12 space-y-4">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-ice-900">Request Submitted Successfully!</h3>
+                        <p class="text-slate-600 max-w-md mx-auto">Your details have been routed to our emergency restoration team. A technical representative will reach out to you immediately.</p>
+                        <button onclick="resetContactForm()" class="px-6 py-2.5 bg-ice-100 text-ice-600 font-bold rounded-xl hover:bg-ice-200 transition">Submit Another Inquiry</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Component -->
+    <footer class="relative z-10 glass-dark text-white border-t border-white/10 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2 space-y-4">
+                    <span class="text-xl font-black tracking-tight">Midwest Water Damage Experts</span>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-md">
+                        Rapid emergency water damage extraction, structural drying, and mold remediation serving Lima, Wapakoneta, Delphos, Ottawa, and Bluffton, Ohio.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-ice-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#blog" class="hover:text-white transition">Restoration Guide</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Request Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-ice-400 mb-4">Ohio Service Area</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Lima (OH), Wapakoneta (OH), Delphos (OH), Ottawa (OH), Bluffton (OH) & Surrounding Townships.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-10 pt-6 text-center text-xs text-slate-400">
+                <p>&copy; 2026 Midwest Water Damage Experts. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Router Script & Apple Motion Logic -->
+    <script>
+        // Hash Router Logic
+        function routeApp() {
+            const hash = window.location.hash || '#home';
+            const pageContainers = document.querySelectorAll('.page-container');
+
+            pageContainers.forEach(container => container.classList.add('hidden'));
+
+            if (hash === '#home' || hash === '') {
+                document.getElementById('view-home').classList.remove('hidden');
+            } else if (hash === '#services') {
+                document.getElementById('view-services').classList.remove('hidden');
+            } else if (hash === '#about') {
+                document.getElementById('view-about').classList.remove('hidden');
+            } else if (hash === '#blog') {
+                document.getElementById('view-blog').classList.remove('hidden');
+            } else if (hash.startsWith('#blog/')) {
+                document.getElementById('view-article').classList.remove('hidden');
+            } else if (hash === '#contact') {
+                document.getElementById('view-contact').classList.remove('hidden');
+            } else {
+                document.getElementById('view-home').classList.remove('hidden');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('mobile-dropdown').classList.add('hidden');
+            initScrollObserver();
+        }
+
+        window.addEventListener('hashchange', routeApp);
+        window.addEventListener('load', routeApp);
+
+        // Mobile Dropdown Navigation Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('hidden');
+        });
+
+        // Intersection Observer for Smooth Fade-In Reveal
+        function initScrollObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-node').forEach(node => observer.observe(node));
+        }
+
+        // Contact Form Processing
+        const contactLeadForm = document.getElementById('contactLeadForm');
+        const contactFormSuccess = document.getElementById('contactFormSuccess');
+
+        contactLeadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactLeadForm.classList.add('hidden');
+            contactFormSuccess.classList.remove('hidden');
+        });
+
+        function resetContactForm() {
+            contactLeadForm.reset();
+            contactFormSuccess.classList.add('hidden');
+            contactLeadForm.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
